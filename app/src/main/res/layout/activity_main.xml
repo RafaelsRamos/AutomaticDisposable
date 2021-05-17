@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.spartancookie.automaticdisposable.viewmodels.MyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--             Variable 1               -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="DTO with lifetime of 1 Seconds"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="get"
+                        android:textSize="7sp"
+                        android:onClick="@{() -> viewModel.accessDTO1()}"/>
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="Reset"
+                        android:textSize="7sp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="@{() -> viewModel.resetDTO1()}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Variable 1"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+
+                        tools:text="DTO"/>
+
+                </LinearLayout>
+
+                <!--             Variable 2               -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="DTO with lifetime of 2 Second2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="get"
+                        android:textSize="7sp"
+                        android:onClick="@{() -> viewModel.accessDTO2()}"/>
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="Reset"
+                        android:textSize="7sp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="@{() -> viewModel.resetDTO2()}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Variable 2"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+
+                        tools:text="DTO"/>
+
+                </LinearLayout>
+
+                <!--             Variable 3               -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="DTO with lifetime of 4 Seconds"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="get"
+                        android:textSize="7sp"
+                        android:onClick="@{() -> viewModel.accessDTO3()}"/>
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="Reset"
+                        android:textSize="7sp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="@{() -> viewModel.resetDTO3()}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Variable 3"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+
+                        tools:text="DTO"/>
+
+                </LinearLayout>
+
+                <!--             Variable 4               -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="DTO with lifetime of 8 Seconds with backup instance"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="get"
+                        android:textSize="7sp"
+                        android:onClick="@{() -> viewModel.accessDTO4()}"/>
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="Reset"
+                        android:textSize="7sp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="@{() -> viewModel.resetDTO4()}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Variable 4"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+
+                        tools:text="DTO"/>
+
+                </LinearLayout>
+
+                <!--             Variable 5               -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="DTO with lifetime of 16 Seconds"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="get"
+                        android:textSize="7sp"
+                        android:onClick="@{() -> viewModel.accessDTO5()}"/>
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="Reset"
+                        android:textSize="7sp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="@{() -> viewModel.resetDTO5()}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Variable 5"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+
+                        tools:text="DTO"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
